@@ -1,6 +1,6 @@
 # Electricity Consumption Forecasting
 
-Four cleaned forecasting experiments from an electricity consumption coursework project completed around 2022. The notebooks explore calendar features and observed lags with XGBoost, a one-step-ahead LSTM, and direct multi-month forecasting with Prophet. They were edited for readability and a sounder evaluation workflow while retaining the original approaches.
+Four cleaned forecasting experiments from a summer 2022 internship project I completed between the third and fourth years of my degree. The notebooks explore calendar features and observed lags with XGBoost, a one-step-ahead LSTM, and direct multi-month forecasting with Prophet. They were edited for readability and a sounder evaluation workflow while retaining the original approaches.
 
 ![Average hourly electricity use by time of day](assets/daily-profile.svg)
 
@@ -43,4 +43,4 @@ To regenerate the CSV, download the source ZIP from [UCI](https://archive.ics.uc
 - Corrected the LSTM scaling leak and separated model selection from final test evaluation.
 - Removed the original US holiday calendar, which did not match the household's French location.
 
-**Limitations:** The dataset reconstruction is strongly supported by the archived summary statistics, but the exact original preprocessing script was not available. Forward filling missing minute readings can bias the target. The notebooks have been structurally checked; full model runs remain to be verified. This repository is a curated coursework archive, not a production forecasting system.
+**Limitations:** The dataset reconstruction is strongly supported by the archived summary statistics, but the exact original preprocessing script was not available. Forward filling missing minute readings can bias the target. The notebooks have been structurally checked; full model runs remain to be verified. This repository is a curated internship archive, not a production forecasting system.
