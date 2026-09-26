@@ -4,7 +4,7 @@ Four cleaned forecasting experiments from an electricity consumption coursework 
 
 ![Average hourly electricity use by time of day](assets/daily-profile.svg)
 
-> **Reproducibility status:** The archive contained only four notebooks. I reconstructed its missing hourly CSV from the [UCI Individual Household Electric Power Consumption dataset](https://archive.ics.uci.edu/dataset/235/individualhouseholdelectricpowerconsumption), also [mirrored on Kaggle](https://www.kaggle.com/datasets/uciml/electric-power-consumption-data-set). The reconstructed data matches the archived notebooks' first and last rows, row count, mean, standard deviation, minimum and maximum. Model results have not been re-executed, so no performance claims are included.
+> **Reproducibility status:** The archive contained only four notebooks. Its missing hourly CSV was reconstructed from the [UCI Individual Household Electric Power Consumption dataset](https://archive.ics.uci.edu/dataset/235/individualhouseholdelectricpowerconsumption), also [mirrored on Kaggle](https://www.kaggle.com/datasets/uciml/electric-power-consumption-data-set). The reconstructed data matches the archived notebooks' first and last rows, row count, mean, standard deviation, minimum and maximum. Model results have not been re-executed, so no performance claims are included.
 
 ## Experiments
 
@@ -33,7 +33,7 @@ python -m jupyter lab
 
 The notebooks validate that timestamps are unique, sorted and exactly hourly, with no missing target values. They use a chronological 70/15/15 train/validation/test split. Validation is used for stopping or parameter selection; test is kept for final evaluation.
 
-To regenerate the CSV, download the source ZIP from [UCI](https://archive.ics.uci.edu/dataset/235/individualhouseholdelectricpowerconsumption) and run `python scripts/prepare_data.py --archive path/to/download.zip`. The original coursework's preprocessing forward-filled missing minute readings before hourly aggregation. This reproduces the archive but may distort periods with long missing stretches; see the data notes.
+To regenerate the CSV, download the source ZIP from [UCI](https://archive.ics.uci.edu/dataset/235/individualhouseholdelectricpowerconsumption) and run `python scripts/prepare_data.py --archive path/to/download.zip`. The reconstruction forward-fills missing minute readings before hourly aggregation. This matches the archive's summary statistics but may distort periods with long missing stretches; see the data notes.
 
 ## What changed from the archive
 
